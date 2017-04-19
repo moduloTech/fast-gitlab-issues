@@ -6,7 +6,7 @@ require 'fgi/version'
 Gem::Specification.new do |spec|
   spec.name          = "fgi"
   spec.version       = Fgi::VERSION
-  spec.authors       = ["Julien PHILIBIN, ""Pedro Coutinho"]
+  spec.authors       = ["Julien PHILIBIN", "Pedro Coutinho"]
   spec.email         = ["philib_j@modulotech.fr"]
 
   spec.summary       = %q{CLI for gitlab.}
