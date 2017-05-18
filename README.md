@@ -2,18 +2,19 @@
 
 ## Welcome to Fast Gitlab Issues!
 
-Fast Gitlab Issues, aka Fgi, is a command line issue creation tool for Gitlab.
+Fast Gitlab Issues, aka Fgi, is a command line issue creation tool for Gitlab v8.8+.
 
 To install, add the following to your project's Gemfile:
 
 ```ruby
-gem 'fgi', git: 'git@source.modulotech.fr:modulotech/fgi.git'
+gem 'fgi', git: 'https://github.com/rapidos/fast-gitlab-issues.git'
 ```
 
 And run `bundle install`.
 
 After it finishes, run `$ fgi --config` if the gem is new to the project, or run `$ fgi --token <token>` if you are new to the project and fgi was previously installed.
 
+You can create your token from Gitlab -> Settings -> Access Tokens
 From then on, create your issues from the console:
 
 ```sh

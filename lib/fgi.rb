@@ -6,13 +6,13 @@ require 'json'
 module Fgi
   class << self
   end
-  autoload :Config, 'fgi/config'
-  autoload :Version, 'fgi/version'
-  autoload :Executor, 'fgi/executor'
-  autoload :HTMLRequest, 'fgi/html_request'
-  autoload :Helper, 'fgi/helper'
-  autoload :Configurator, 'fgi/configurator'
-  autoload :GenerateFile, 'fgi/generate_file'
+  require_relative 'fgi/config'
+  require_relative 'fgi/version'
+  require_relative 'fgi/executor'
+  require_relative 'fgi/html_request'
+  require_relative 'fgi/helper'
+  require_relative 'fgi/configurator'
+  require_relative 'fgi/generate_file'
 
   CONFIG_FILE = '.fast_gitlab_issues.yml'
 end

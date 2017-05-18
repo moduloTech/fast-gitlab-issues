@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 
 require 'open3'
-require "fgi"
+require 'uri'
+require 'net/http'
+require_relative '../lib/fgi'
 
 # extract core logic from here into the gem bin
 module Fgi
@@ -17,13 +19,13 @@ module Fgi
       when content.match(/--config/)
         Fgi::Configurator.run
       when content.match(/--token/)
-        Fgi::Configurator.save_gitlab_token(content.strip.split(' ').last)
+        Fgi::Configurator.validate_and_save_gitlab_token(content.strip.split(' ').last)
       else
         title = content
         description = []
-        success = system("vim temp.txt")
+        success = system('vim temp.txt')
         if success
-          File.open("temp.txt", "r") do |f|
+          File.open('temp.txt', 'r') do |f|
             f.each_line do |line|
               description << line
             end
