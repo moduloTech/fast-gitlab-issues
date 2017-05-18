@@ -6,7 +6,6 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    byebug (9.0.6)
     diff-lcs (1.2.5)
     rake (10.4.2)
     rspec (3.5.0)
@@ -28,7 +27,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.13)
-  byebug
   fgi!
   rake (~> 10.0)
   rspec (~> 3.0)
