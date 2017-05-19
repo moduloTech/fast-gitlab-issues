@@ -14,11 +14,11 @@ module Fgi
       case
       when content.empty?
         Fgi::Helper.run
-      when content.match(/--help/)
+      when content.include?('--help')
         Fgi::Helper.run
-      when content.match(/--config/)
+      when content.include?('--config')
         Fgi::Configurator.run
-      when content.match(/--token/)
+      when content.include?('--token')
         Fgi::Configurator.validate_and_save_gitlab_token(content.strip.split(' ').last)
       else
         create_issue(content)
