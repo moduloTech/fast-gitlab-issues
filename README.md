@@ -33,3 +33,25 @@ $ fgi --token \<token\> \# saves the private gitlab token to a file and adds it 
 The config will ask you for your gitlab access token (you can get it from AF2) and the project URL from gitlab.
 
 Any bugs/requests please open an issue, feel free to use fgi to do so!
+
+# TOdos
+Currently fgi doesn't count time, i'd add this functionality
+* start, pause, resume, finish, or something like that. 
+* i'd add shortcuts "fgi new" > "fgi n"
+* it doesn't operate with labels
+* i couldn't find list command to enlist existing issues. something like "fgi list todo"
+
+Lev's best workflow is:
+* find an issue from todo or milestone with list command
+* get its description
+* start working:
+  * start timer
+	* change its label todo > doing (wip)
+	* set up a branch
+* optionally pause / resume timer, execute /spent
+* optionally leave a comment
+* finish working:
+  * push
+	* deploy
+	* label doing > dome
+	* execute /spent
