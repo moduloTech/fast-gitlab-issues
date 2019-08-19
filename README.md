@@ -52,6 +52,6 @@ Lev's best workflow is:
 * optionally leave a comment
 * finish working:
   * push
-	* deploy
-	* label doing > dome
-	* execute /spent
+  * deploy
+  * label doing > dome
+  * execute /spent
