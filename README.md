@@ -55,3 +55,14 @@ Lev's best workflow is:
   * deploy
   * label doing > dome
   * execute /spent
+* since you require "push as often as possible", i'd recommend to attach this autopush to pause action as well
+  * Default push comment will be '#123 autocommit'
+  * but editable with 
+  * fgi pause -m 'done for today'
+  * which produces '#123 done for today'
+  * after that fgm automatically switch to default branch, so, to continue working, you will not forget to type fgm start
+  * it should remember last active issue and treat it as default
+  * this way i can painlessly switch between issues by fgm start 111
+  * if there's already active issue in progress and i type fgm start 111 it checks if current issue is 111; if it's not, then it should ask me do i want to pause, finish, or cancel [P/f/c]. so i can just hit enter to pause previous issue
+  * some companies required to squash commits into one before merge request, so code review will process faster - can also be done automatically on finish
+
